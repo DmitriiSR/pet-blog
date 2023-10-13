@@ -1,17 +1,18 @@
 <template>
-  <div>
-    <NavBar/>
-    <main>
-      <slot></slot>
-    </main>
-  </div>
+    <div class="">
+      <NavBar class="shadow-md"/>
+      <main class="container">
+        <slot></slot>
+      </main>
+    </div>
 </template>
 
 <script setup lang="ts">
-import '../assets/styles/index.css'
 
 </script>
 
 <style scoped>
-
+body {
+  @apply bg-sys-white dark:bg-sys-gray dark:text-sys-gray;
+}
 </style>

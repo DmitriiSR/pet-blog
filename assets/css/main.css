@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-.nav-bar {
-    width: 100%;
-    background-color: antiquewhite;
-    padding: 16px 24px;
-}
-
 .menu {
     display: flex;
     list-style-type: none;
