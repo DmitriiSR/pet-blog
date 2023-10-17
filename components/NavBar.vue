@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header__inner">
       <BlogLogo/>
-      <UiInput type="search" class="header__search"/>
+      <UiInput type="search" class="header__search" placeholder="Search"/>
       <nav class="header__menu">
         <UiButton label="Войти"/>
       </nav>

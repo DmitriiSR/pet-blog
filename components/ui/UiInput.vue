@@ -1,14 +1,15 @@
 <template>
   <label class="ui-input-label">
     <span v-if="props.label">{{ props.label }}</span>
-    <input class="ui-input" :type="props.type">
+    <input class="ui-input" :placeholder="props.placeholder" :type="props.type">
   </label>
 </template>
 
 <script setup lang="ts">
 interface UiInputProps {
   type: 'text' | 'search' | 'number',
-  label: string
+  label: string,
+  placeholder: string
 }
 const props = withDefaults(defineProps<UiInputProps>(), {
   type: 'text'

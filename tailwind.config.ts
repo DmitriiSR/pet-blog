@@ -8,9 +8,9 @@ const colors = {
     'sys-dark-green': '#00A388',
     'sys-green': '#12BFA2',
     'sys-light-green': '#36F5D5',
-    'sys-light-gray': '#C9D3D1',
-    'sys-gray': '#A0B6B6',
-    'sys-dark-gray': '#556464',
+    'sys-light-grey': '#C9D3D1',
+    'sys-grey': '#A0B6B6',
+    'sys-dark-grey': '#556464',
     'sys-red': '#D80032',
 }
 
@@ -21,6 +21,9 @@ export default <Partial<Config>>{
         backgroundColor: {
             ...colors
         },
+        borderColor: {
+            ...colors
+        }
     },
     plugins: [],
     content: []

@@ -13,7 +13,7 @@
 
 <style scoped>
 body {
-  @apply bg-sys-white dark:bg-sys-gray dark:text-sys-gray;
+  @apply bg-sys-white dark:bg-sys-grey dark:text-sys-grey text-sys-black
 }
 
 .main {
