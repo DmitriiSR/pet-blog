@@ -1,13 +1,24 @@
 <template>
-  <button type="button" class="ui-button">{{label}}</button>
+  <button type="button" :class="props.type" class="ui-button">{{label}}</button>
 </template>
 
 <script setup lang="ts">
-const props = defineProps(['label'])
+type ButtonType = 'primary' | 'secondary'
+interface UiButtonProps {
+  label: string,
+  type: ButtonType
+}
+const props = withDefaults(defineProps<UiButtonProps>(), {
+  type: 'primary'
+})
 </script>
 
 <style scoped lang="postcss">
 .ui-button {
-  @apply py-2 px-4 text-white cursor-pointer rounded-lg
+  @apply py-2 px-4 cursor-pointer rounded-lg
+}
+
+.ui-button.primary {
+  @apply bg-sys-green
 }
 </style>

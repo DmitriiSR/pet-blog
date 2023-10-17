@@ -1,15 +1,17 @@
 <template>
-  <nav class="nav-bar">
-    <ul class="nav-bar__inner">
-      <li class="menu__item badge mr-2"><a href="/">Main</a></li>
-      <li class="menu__item"><a href="/login">Login</a></li>
-      <li class="menu__item"><a href="/registration">Registration</a></li>
-      <li class="menu__item"><a href="/profile">Profile</a></li>
-    </ul>
-  </nav>
+  <header class="header">
+    <div class="header__inner">
+      <BlogLogo/>
+      <UiInput type="search" class="header__search"/>
+      <nav class="header__menu">
+        <UiButton label="Войти"/>
+      </nav>
+    </div>
+  </header>
 </template>
 
 <script setup lang="ts">
+
 let darkTheme = false;
 const colorMode = useColorMode();
 const toggleTheme = () => {
@@ -23,11 +25,27 @@ const toggleTheme = () => {
 </script>
 
 <style lang="postcss" scoped>
-.nav-bar {
-  @apply bg-sys-gray text-sys-white py-2
+.header {
+  box-shadow: 0 0 15px 0 rgba(121, 123, 174, 0.25);
+  @apply bg-sys-white text-sys-white py-4
 }
 
-.nav-bar__inner {
-  @apply container flex mx-auto
+.header__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 24px;
+
+  @apply container mx-auto
+}
+
+.header__search input {
+  display: block;
+  width: 100%;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
