@@ -1,10 +1,8 @@
 <template>
-    <div class="">
-      <NavBar/>
-      <main class="main">
-        <slot></slot>
-      </main>
-    </div>
+    <NavBar/>
+    <main class="main">
+      <slot></slot>
+    </main>
 </template>
 
 <script setup lang="ts">

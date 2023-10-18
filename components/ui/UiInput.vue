@@ -8,8 +8,8 @@
 <script setup lang="ts">
 interface UiInputProps {
   type: 'text' | 'search' | 'number',
-  label: string,
-  placeholder: string
+  label?: string,
+  placeholder?: string
 }
 const props = withDefaults(defineProps<UiInputProps>(), {
   type: 'text'

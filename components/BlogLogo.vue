@@ -8,7 +8,7 @@ import {Ref} from "vue";
 import {LogoStyles} from "~/types/types";
 
 interface LogoProps {
-  size: LogoSizes
+  size?: LogoSizes
 }
 const props = withDefaults(defineProps<LogoProps>(), {
   size: 'medium'

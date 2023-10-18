@@ -6,7 +6,7 @@
 type ButtonType = 'primary' | 'secondary'
 interface UiButtonProps {
   label: string,
-  type: ButtonType
+  type?: ButtonType
 }
 const props = withDefaults(defineProps<UiButtonProps>(), {
   type: 'primary'
