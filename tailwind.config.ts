@@ -9,7 +9,8 @@ export default <Partial<Config>>{
         },
         borderColor: {
             ...COLORS
-        }
+        },
+
     },
     plugins: [],
     content: []

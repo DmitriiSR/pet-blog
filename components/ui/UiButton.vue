@@ -1,11 +1,12 @@
 <template>
-  <button type="button" :class="props.type" class="ui-button">{{label}}</button>
+  <button type="button" :class="props.type" class="ui-button">
+    <slot></slot>
+  </button>
 </template>
 
 <script setup lang="ts">
 type ButtonType = 'primary' | 'secondary'
 interface UiButtonProps {
-  label: string,
   type?: ButtonType
 }
 const props = withDefaults(defineProps<UiButtonProps>(), {

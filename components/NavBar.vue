@@ -1,17 +1,19 @@
 <template>
   <header class="header">
     <div class="header__inner">
-      <BlogLogo/>
+      <div class="flex justify-between">
+        <BlogLogo/>
+        <ThemeToggle/>
+      </div>
       <UiInput type="search" class="header__search" placeholder="Search"/>
       <nav class="header__menu">
-        <UiButton label="Войти"/>
+        <UiButton>Sign in</UiButton>
       </nav>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-
 let darkTheme = false;
 const colorMode = useColorMode();
 const toggleTheme = () => {
